@@ -18,4 +18,74 @@
             name1+=" ";
         }        
         System.out.println(name1);
-4th......
+
+
+
+4th......public class Palindrome {
+    public static void main(String[] args) {
+
+        String name = "A man, a plan, a canal: Panama";
+
+        int left = 0;
+        int right = name.length() - 1;
+
+        boolean isPalindrome = true;
+
+        while (left < right) {
+
+            // Skip spaces and punctuation from the left
+            if (!Character.isLetterOrDigit(name.charAt(left))) {
+                left++;
+                continue;
+            }
+
+            // Skip spaces and punctuation from the right
+            if (!Character.isLetterOrDigit(name.charAt(right))) {
+                right--;
+                continue;
+            }
+
+            // Compare characters ignoring case
+            if (Character.toLowerCase(name.charAt(left)) !=
+                Character.toLowerCase(name.charAt(right))) {
+
+                isPalindrome = false;
+                break;
+            }
+
+            left++;
+            right--;
+        }
+
+        System.out.println(isPalindrome);
+    }
+}
+
+4.2nd---------------------------------------------------------approach
+5th-------------------------------
+ String name1 =  "Test@123 Yantra";
+      String name = name1.toLowerCase();
+      System.out.println(name1);
+      int Vowels=0, Consonants=0, Digits=0, Special=0, Spaces=0;
+      for(int i=0;i<name.length();i++){
+        char ch = name.charAt(i);
+        if(ch=='a'||ch=='e'||ch=='i'||ch=='o'||ch=='u'){
+          Vowels++;
+        }
+        else if(Character.isDigit(name.charAt(i))){
+          Digits++;
+        }
+        else if(Character.isLetter(ch)){
+          Consonants++;
+        }
+        else if(name.charAt(i)==' '){
+          Spaces++;
+        }
+        else{
+          Special++;
+        }
+      }
+      System.out.println("Vowels = "+Vowels+", Consonants = "+Consonants+", Digits = "+Digits+", Special = "+Special+", Spaces = "+Spaces);
+
+
+
