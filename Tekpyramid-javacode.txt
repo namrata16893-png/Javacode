@@ -1,0 +1,21 @@
+ 2nd.....String name ="Selenium java python";
+        String name1 = "";
+        String [] arr = name.split(" ");
+       for(String s : arr){
+          for(int i = s.length()-1;i>=0;i--){
+            name1+=s.charAt(i);
+        }  
+         //System.out.println(s);
+         name1+=" ";
+               }
+        
+        System.out.println(name1);
+3rd...String name ="Selenium java python";
+        String name1 = "";
+        String [] arr = name.split(" ");       
+          for(int i = arr.length-1;i>=0;i--){
+           name1+=arr[i];
+            name1+=" ";
+        }        
+        System.out.println(name1);
+4th......
